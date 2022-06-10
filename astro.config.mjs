@@ -9,5 +9,5 @@ export default defineConfig({
     port: 42069
   },
   integrations: [preact()],
-  site: "https://cancercooki.github.io",
+  site: "https://cancercookie.github.io",
 });
