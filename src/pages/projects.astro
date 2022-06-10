@@ -1,8 +1,8 @@
 ---
-import MainHead from '../components/MainHead.astro';
-import Footer from '../components/Footer/index.jsx';
-import Nav from '../components/Nav/index.jsx';
-import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
+import MainHead from '@components/MainHead.astro';
+import Footer from '@components/Footer';
+import Nav from '@components/Nav';
+import PortfolioPreview from '@components/PortfolioPreview';
 
 interface MarkdownFrontmatter {
 	publishDate: number;
@@ -17,6 +17,7 @@ const projects = projectsRes
 
 <html lang="en">
 	<head>
+	    <meta charset="UTF-8">
 		<MainHead title="All Projects | Jari Tarabelli" description="Learn about Jari Tarabelli's most recent projects" />
 		<style lang="scss">
 			.grid {

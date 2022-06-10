@@ -1,14 +1,8 @@
 // Tokens
 :root {
-	//filter: grayscale(1);
-	// (c)olor
 	--c-black: #05091e;
-	--c-magenta: #e953da;
-	--c-blue: #142f48;
 	--c-teal: #1e8cb0;
 	--c-pink: #f5c1f0;
-	--c-purple: #4c44cf;
-	--c-white: #fff;
 
 	// (f)ont
 	--f-base-size: 1rem;
@@ -54,19 +48,23 @@
 	--f-d18: 0.0877914951989026em;
 
 	// (t)heme
-	--t-fg: var(--c-purple);
-	--t-bg: var(--c-blue);
-	--t-subdue: var(--c-magenta);
-	--t-active: var(--c-white);
+	--t-fg: #d1a2cb;
+	--t-bg: #80339b;
+	--t-subdue: #fdd9fd;
+	--t-active: #ac58e7;
 }
 
 // Base
+@font-face {
+	font-family: "color-emoji";
+	src: local("Apple Color Emoji")
+}
 
 body {
 	margin: 0;
 	color: var(--t-fg);
 	background-color: var(--t-bg);
-	font-family: 'Inter', 'system-ui', sans-serif;
+	font-family: 'Inter', 'system-ui', sans-serif, color-emoji;
 	font-size: var(--f-base-size);
 }
 

@@ -1,10 +1,10 @@
 ---
 // Component Imports
-import MainHead from '../components/MainHead.astro';
-import {Button} from '../components/Button/index.jsx';
-import Nav from '../components/Nav/index.jsx';
-import Footer from '../components/Footer/index.jsx';
-import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
+import MainHead from '@components/MainHead.astro';
+import {Button} from '@components/Button';
+import Nav from '@components/Nav';
+import Footer from '@components/Footer';
+import PortfolioPreview from '@components/PortfolioPreview';
 
 // Styles Imports
 import '../styles/index.scss';
@@ -16,6 +16,7 @@ const featuredProject = projects[0].frontmatter;
 
 <html lang="en">
 	<head>
+	<meta charset="UTF-8">
 		<MainHead title="Jari Tarabelli: Personal Site" description="Jari Tarabelli: Developer, Speaker, and Writer..." />
 	</head>
 	<body>
