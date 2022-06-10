@@ -8,5 +8,6 @@ export default defineConfig({
   server: {
     port: 42069
   },
-  integrations: [preact()]
+  integrations: [preact()],
+  site: "https://cancercooki.github.io",
 });
