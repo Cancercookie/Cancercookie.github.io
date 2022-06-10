@@ -1,0 +1,46 @@
+---
+// Component Imports
+import MainHead from '../components/MainHead.astro';
+import {Button} from '../components/Button/index.jsx';
+import Nav from '../components/Nav/index.jsx';
+import Footer from '../components/Footer/index.jsx';
+import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
+
+// Styles Imports
+import '../styles/index.scss';
+
+// Data Fetching: List all Markdown posts in the repo.
+const projects = await Astro.glob('./project/**/*.md');
+const featuredProject = projects[0].frontmatter;
+---
+
+<html lang="en">
+	<head>
+		<MainHead title="Jari Tarabelli: Personal Site" description="Jari Tarabelli: Developer, Speaker, and Writer..." />
+	</head>
+	<body>
+		<Nav />
+		<header class="hero">
+			<div class="overlay">
+				<h1 class="title">
+					<span class="invertedText">Jari Tarabelli<span class="invertedText inverted">Jari Tarabelli</span></span>
+					<span class="invertedText">👨‍💻 Developer 🕹<span class="invertedText inverted">👨‍💻 Developer 🕹</span></span>
+				</h1>
+			</div>
+		</header>
+		<main class="wrapper mt4 mb4">
+			<div class="grid">
+				<div class="section">
+					<h3 class="sectionTitle">I did a thing:</h3>
+					<PortfolioPreview project={featuredProject} />
+					<div class="tac mt4">
+						<a href="/projects">
+							<Button>View All</Button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
