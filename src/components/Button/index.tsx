@@ -1,13 +1,13 @@
 import Styles from "./styles.module.scss";
-export function Button({
-  children
-}) {
-  return <span className={Styles.button}>{children}</span>;
-}
-export function ButtonBack() {
-  return <a href="/">
-            <Button>
-                👈 Go Back
-            </Button>
-        </a>;
-}
+
+export const Button = ({children}) => (
+    <span className={Styles.button}>{children}</span>
+);
+
+export const ButtonBack = () => (
+    <a href="/">
+        <Button>
+            👈 Go Back
+        </Button>
+    </a>
+);
